@@ -1,1 +1,1 @@
-# C_Calculator
+# C language Calculator
