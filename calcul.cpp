@@ -42,7 +42,7 @@ void init() {
 int push(int a) {
 
 	if (top >= MAX - 1) {
-		printf("\n    Stack overflow.");
+		printf("Stack overflow.");
 		return -1;
 	}
 
@@ -52,7 +52,7 @@ int push(int a) {
 
 int pop() {
 	if (top < 0) {
-		printf("\n   Stack underflow.");
+		printf("Stack underflow.");
 		return -1;
 	}
 	return stack[top--];
