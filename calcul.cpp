@@ -19,19 +19,23 @@ void postfix(char *a, char *b);
 int legal(char *a);
 
 int main() {
-
 	int a;
 	char arr[256] = { 0, };
-	scanf("%s", arr);
-	char arr2[256];
-	postfix(arr2, arr);
-	if (!legal(arr2)) {
-		printf("Error!\n");
-		exit(1);
+	while (1) {
+		scanf("%s", arr);
+		char arr2[256];
+		if (!strcmp(arr, "q")) {
+			return 0;
+		}
+		postfix(arr2, arr);
+		if (!legal(arr2)) {
+			printf("Error!\n");
+		}
+		else {
+			a = calc(arr2);
+			printf("Answer : %d\n", a);
+		}
 	}
-	a = calc(arr2);
-	printf("Answer : %d\n", a);
-
 	system("pause");
 }
 
